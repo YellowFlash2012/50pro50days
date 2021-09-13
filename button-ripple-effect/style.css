@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    background-color: purple;
+    color: #fff;
+    border: 1px solid purple;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    margin: 10px 0;
+    position: relative;
+    outline: none;
+}
+
+.circle {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    /* top: 27px; */
+    /* left: 82px; */
+
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
